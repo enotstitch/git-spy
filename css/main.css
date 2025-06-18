@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Цвета */
+  --dark-color: #222222;
+  --light-color: #f5edf0;
+  --bg-color: #dcbddf;
+  --accent-color: #9a99e1;
+  --error-color: #f06464;
+
+  /* Шрифты */
+  --font-main: 'Nunito', sans-serif;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-color);
+  background-color: var(--bg-color);
+}
+
+.site-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1400px;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.link-reset {
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.input-reset {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.error {
+  border: 2px solid var(--error-color);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  max-width: fit-content;
+}
+
+.search-form__input {
+  padding: 0 30px;
+  border-radius: 5px;
+  border: 2px solid var(--accent-color);
+  background: var(--light-color);
+}
+
+.search-form__button {
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  transition: filter 0.3s;
+}
+
+.search-form__button:hover {
+  filter: brightness(0.9);
+}
+
+.attribution {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+.attribution__text {
+  max-width: fit-content;
+  margin: 0;
+}
+
+.attribution__link {
+  text-decoration: underline;
+  transition: opacity 0.3s;
+}
+
+.attribution__link:hover {
+  opacity: 0.6;
+}
